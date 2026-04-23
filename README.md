@@ -1,5 +1,52 @@
+SensorHub API
+
+Overview
+
+SensorHub is a RESTful API built using JAX-RS (Jersey) and Apache Tomcat.
+It manages Rooms, Sensors, and Sensor Readings with support for CRUD operations, filtering, nested resources, error handling, and logging.
+
+How to Run:
+
+1. Open project in NetBeans
+2. Configure Apache Tomcat
+3. Right-click project → Run
+
+ Base URL:http://localhost:8080/SensorHub/api/v1
+
+Sample cURL Commands:
+
+# Get all rooms
+curl http://localhost:8080/SensorHub/api/v1/rooms
+
+# Create a room
+curl -X POST http://localhost:8080/SensorHub/api/v1/rooms \
+-H "Content-Type: application/json" \
+-d '{"id":"R3","name":"Office","capacity":60,"sensorIds":[]}'
+
+# Delete a room
+curl -X DELETE http://localhost:8080/SensorHub/api/v1/rooms/R2
+
+# Get all sensors
+curl http://localhost:8080/SensorHub/api/v1/sensors
+
+# Add sensor reading
+curl -X POST http://localhost:8080/SensorHub/api/v1/sensors/S1/readings \
+-H "Content-Type: application/json" \
+-d '{"id":"SR1","timestamp":1713000000000,"value":420.5}'
+
+
+
+
+
+
+
+
+
+
+
 REPORT (Coursework Answers)
- Part 1
+ 
+Part 1
 Q1: Resource lifecycle
 
 In JAX-RS, a new resource object is created for each incoming request. This means every request is handled independently, which helps avoid shared data issues. Because of this, I stored my data in static collections (like HashMaps in MockDatabase) so that the data persists across requests. This also means I don’t need to worry about multiple requests interfering with each other at the object level.
