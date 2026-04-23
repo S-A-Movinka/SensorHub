@@ -1,6 +1,6 @@
-SensorHub API
+#SensorHub API
 
-Overview
+#Overview
 
 SensorHub is a RESTful API built using JAX-RS (Jersey) and Apache Tomcat.
 It manages Rooms, Sensors, and Sensor Readings with support for CRUD operations, filtering, nested resources, error handling, and logging.
