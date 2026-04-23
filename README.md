@@ -1,11 +1,11 @@
-SensorHub API
+# SensorHub API
 
-Overview
+# Overview
 
 SensorHub is a RESTful API built using JAX-RS (Jersey) and Apache Tomcat.
 It manages Rooms, Sensors, and Sensor Readings with support for CRUD operations, filtering, nested resources, error handling, and logging.
 
-How to Run:
+# How to Run:
 
 1. Open project in NetBeans
 2. Configure Apache Tomcat
@@ -13,7 +13,7 @@ How to Run:
 
  Base URL:http://localhost:8080/SensorHub/api/v1
 
-Sample cURL Commands:
+# Sample cURL Commands:
 
 # Get all rooms
 curl http://localhost:8080/SensorHub/api/v1/rooms
@@ -35,7 +35,7 @@ curl -X POST http://localhost:8080/SensorHub/api/v1/sensors/S1/readings \
 -d '{"id":"SR1","timestamp":1713000000000,"value":420.5}'
 
 
-REPORT (Coursework Answers)
+# REPORT (Coursework Answers)
  
 Part 1
 Q1: Resource lifecycle
