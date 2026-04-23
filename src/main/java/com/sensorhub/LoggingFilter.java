@@ -23,7 +23,7 @@ public class LoggingFilter implements ContainerRequestFilter, ContainerResponseF
 
     @Override
     public void filter(ContainerRequestContext requestContext) throws IOException {
-        System.out.println("FILTER WORKING");
+        
         
         LOGGER.info("Incoming Request: "
                 + requestContext.getMethod() + " "
@@ -34,7 +34,7 @@ public class LoggingFilter implements ContainerRequestFilter, ContainerResponseF
     public void filter(ContainerRequestContext requestContext,
             ContainerResponseContext responseContext) throws IOException {
         
-        System.out.println(" RESPONSE FILTER "); 
+         
         LOGGER.info("Outgoing Response Status: " + responseContext.getStatus());
     }
 }
